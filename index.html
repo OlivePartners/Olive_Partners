@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Olive Partners Limited</title>
  
-<link href=https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400&display=swap rel="stylesheet">
+<link href=https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400&display=swap rel="stylesheet">
  
 <style>
  
@@ -36,14 +36,16 @@ body {
 .logo {
     font-family:'Playfair Display';
     color:white;
+    font-size:20px;
+    letter-spacing:1px;
 }
  
 .logo span {
     display:block;
-    font-size:11px;
-    letter-spacing:3px;
+    font-size:12px;
+    letter-spacing:4px;
     color:#C2A85A;
-    margin-top:3px;
+    margin-top:2px;
 }
  
 /* NAV LINKS */
@@ -58,12 +60,6 @@ body {
  
 .nav a:hover {
     color:#C2A85A;
-}
- 
-.btn-nav {
-    background:#C2A85A;
-    padding:9px 18px;
-    color:#1f3a2c !important;
 }
  
 /* HERO */
@@ -85,7 +81,7 @@ body {
 .hero h1 {
     font-family:'Playfair Display';
     font-size:64px;
-    font-weight:400;
+    font-weight:500;
 }
  
 .gold { color:#C2A85A; }
@@ -105,11 +101,11 @@ body {
     color:#1f3a2c;
 }
  
-/* CARDS */
-.cards {
+/* SECTION */
+.section {
     padding:140px 0;
-    background:#f5f3ef;
     text-align:center;
+    background:#f5f3ef;
 }
  
 .subtitle {
@@ -118,8 +114,9 @@ body {
     letter-spacing:2px;
 }
  
+/* CARDS */
 .card-grid {
-    width:80%;
+    width:85%;
     margin:60px auto 0;
     display:flex;
     justify-content:center;
@@ -131,10 +128,12 @@ body {
     padding:40px;
     width:300px;
     border-top:3px solid #C2A85A;
+    text-align:left;
 }
  
 .card h3 {
     font-family:'Playfair Display';
+    margin-bottom:10px;
 }
  
 /* ASSISTED */
@@ -154,16 +153,6 @@ body {
     font-size:48px;
 }
  
-.assisted .subtitle {
-    margin-bottom:10px;
-}
- 
-.assisted p {
-    max-width:700px;
-    margin:20px auto;
-    line-height:1.8;
-}
- 
 /* CONTACT */
 .contact {
     background:#1f3a2c;
@@ -178,6 +167,14 @@ body {
     gap:80px;
 }
  
+.contact-left {
+    width:40%;
+}
+ 
+.contact-right {
+    width:60%;
+}
+ 
 .label {
     color:#C2A85A;
     font-size:12px;
@@ -187,6 +184,24 @@ body {
 .value {
     margin-top:5px;
     font-size:16px;
+}
+ 
+input, textarea {
+    width:100%;
+    padding:14px;
+    margin-top:10px;
+    margin-bottom:20px;
+    background:transparent;
+    border:1px solid rgba(255,255,255,0.2);
+    color:white;
+}
+ 
+button {
+    background:#C2A85A;
+    border:none;
+    padding:16px;
+    width:100%;
+    cursor:pointer;
 }
  
 /* FOOTER */
@@ -210,9 +225,9 @@ body {
         </div>
         <div>
             <a href="#">HOME</a>
-            <a href="#cards">STRATEGY</a>
+            <a href="#strategy">STRATEGY</a>
             <a href="#assisted">ASSISTED LIVING</a>
-            <a href="#contact" class="btn-nav">CONTACT</a>
+            <a href="#contact">CONTACT</a>
         </div>
     </div>
 </div>
@@ -221,23 +236,29 @@ body {
     <div class="container">
         <h1>Investing in the Future of<br><span class="gold">British Residential Property</span></h1>
         <p>Olive Partners Limited acquires and manages high-quality residential real estate across the UK with a disciplined long-term approach.</p>
-        <a href="#cards" class="btn">EXPLORE OUR STRATEGY</a>
+        <a href="#strategy" class="btn">EXPLORE OUR STRATEGY</a>
     </div>
 </div>
  
-<div class="cards" id="cards">
+<div class="section" id="strategy">
     <div class="subtitle">INVESTMENT PHILOSOPHY</div>
     <h2 style="font-family:Playfair Display;">Our Investment Philosophy</h2>
+    <p>We apply a rigorous, research-driven framework to every acquisition and management decision.</p>
  
     <div class="card-grid">
         <div class="card">
             <h3>Quality Asset Acquisition</h3>
+            <p>We target well-located residential properties with strong fundamentals, sustainable demand, and long-term capital preservation characteristics.</p>
         </div>
+ 
         <div class="card">
             <h3>Professional Asset Management</h3>
+            <p>Every property in our portfolio is managed to the highest professional standards, ensuring compliance, tenant welfare, and asset integrity.</p>
         </div>
+ 
         <div class="card">
             <h3>Structured Partnerships</h3>
+            <p>We work with trusted agents, advisers, and operating partners through clear, transparent structures that align incentives and deliver results.</p>
         </div>
     </div>
 </div>
@@ -247,15 +268,15 @@ body {
         <div class="subtitle">EXPANDING OUR PORTFOLIO</div>
         <h2>Assisted Living Sector</h2>
         <p>
-        Olive Partners Limited is actively expanding its presence in the assisted living sector, recognising the growing demand for high-quality supported housing across the UK. We work with specialist operators to deliver accommodation that supports residents with dignity and care.
+        Olive Partners Limited is actively developing its presence in the assisted living space — recognising the growing demand for high-quality supported housing across the UK.
         </p>
-        <a href="#contact" class="btn">FIND OUT MORE</a>
     </div>
 </div>
  
 <div class="contact" id="contact">
     <div class="contact-grid">
-        <div>
+ 
+        <div class="contact-left">
             <h2 style="font-family:Playfair Display;">Contact Olive Partners</h2>
  
             <div class="label">ADDRESS</div>
@@ -275,12 +296,16 @@ body {
             <div class="value">
                 info@olivepartners.co.uk
             </div>
- 
-            <div class="label">WEBSITE</div>
-            <div class="value">
-                www.olivepartners.co.uk
-            </div>
         </div>
+ 
+        <div class="contact-right">
+            <input placeholder="Full Name">
+            <input placeholder="Email Address">
+            <input placeholder="Phone Number">
+            <textarea placeholder="Message"></textarea>
+            <button>SEND ENQUIRY</button>
+        </div>
+ 
     </div>
 </div>
  
