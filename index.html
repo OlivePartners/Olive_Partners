@@ -14,8 +14,6 @@ html { scroll-behavior:smooth; }
 body {
     margin:0;
     font-family:'Inter',sans-serif;
-    color:#2a2a2a;
-    -webkit-font-smoothing:antialiased;
 }
  
 /* NAV */
@@ -36,31 +34,36 @@ body {
 }
  
 .logo {
-    font-family:'Playfair Display',serif;
+    font-family:'Playfair Display';
     color:white;
-    letter-spacing:1px;
-    font-size:17px;
 }
  
+.logo span {
+    display:block;
+    font-size:11px;
+    letter-spacing:3px;
+    color:#C2A85A;
+    margin-top:3px;
+}
+ 
+/* NAV LINKS */
 .nav a {
     color:white;
     text-decoration:none;
     margin-left:26px;
     font-size:12px;
     letter-spacing:1.5px;
-    opacity:0.9;
     transition:0.3s;
 }
  
 .nav a:hover {
-    opacity:1;
     color:#C2A85A;
 }
  
 .btn-nav {
     background:#C2A85A;
     padding:9px 18px;
-    color:#1f3a2c;
+    color:#1f3a2c !important;
 }
  
 /* HERO */
@@ -80,21 +83,17 @@ body {
 }
  
 .hero h1 {
-    font-family:'Playfair Display',serif;
-    font-weight:400;
+    font-family:'Playfair Display';
     font-size:64px;
-    line-height:1.2;
-    animation:fadeUp 1s ease;
+    font-weight:400;
 }
  
 .gold { color:#C2A85A; }
  
 .hero p {
-    max-width:580px;
-    margin-top:18px;
+    max-width:600px;
+    margin-top:20px;
     line-height:1.8;
-    opacity:0.9;
-    animation:fadeUp 1.4s ease;
 }
  
 .btn {
@@ -104,67 +103,6 @@ body {
     margin-top:30px;
     text-decoration:none;
     color:#1f3a2c;
-    font-size:13px;
-    letter-spacing:1px;
-    transition:0.3s;
-}
- 
-.btn:hover {
-    transform:translateY(-2px);
-}
- 
-/* STRIP */
-.strip {
-    background:#1f3a2c;
-    padding:50px 0;
-    color:#C2A85A;
-}
- 
-.strip-inner {
-    width:80%;
-    margin:auto;
-    display:flex;
-    justify-content:space-between;
-    text-align:center;
-}
- 
-.strip-inner div {
-    font-family:'Playfair Display';
-    font-size:22px;
-}
- 
-/* ABOUT */
-.about {
-    padding:140px 0;
-    background:#f5f3ef;
-}
- 
-.about-inner {
-    width:85%;
-    margin:auto;
-    display:flex;
-    gap:70px;
-    align-items:center;
-}
- 
-.about img {
-    width:50%;
-    border-radius:4px;
-}
- 
-.about-text {
-    width:50%;
-}
- 
-.about h2 {
-    font-family:'Playfair Display';
-    font-size:44px;
-    font-weight:400;
-}
- 
-.about p {
-    margin-top:20px;
-    line-height:1.8;
 }
  
 /* CARDS */
@@ -174,62 +112,56 @@ body {
     text-align:center;
 }
  
+.subtitle {
+    color:#C2A85A;
+    font-size:12px;
+    letter-spacing:2px;
+}
+ 
 .card-grid {
-    width:85%;
-    margin:auto;
+    width:80%;
+    margin:60px auto 0;
     display:flex;
+    justify-content:center;
     gap:40px;
-    margin-top:60px;
 }
  
 .card {
     background:white;
-    padding:35px;
+    padding:40px;
+    width:300px;
     border-top:3px solid #C2A85A;
-    text-align:left;
-    transition:0.3s;
 }
  
-.card:hover {
-    transform:translateY(-6px);
+.card h3 {
+    font-family:'Playfair Display';
 }
  
 /* ASSISTED */
 .assisted {
-    height:70vh;
+    height:80vh;
     background:linear-gradient(rgba(20,40,25,0.75), rgba(20,40,25,0.75)),
     url('https://images.unsplash.com/photo-1581578731548-c64695cc6952');
     background-size:cover;
     display:flex;
     align-items:center;
     color:white;
-}
- 
-/* WHY */
-.why {
-    padding:140px 0;
-    background:#f5f3ef;
     text-align:center;
 }
  
-.why-grid {
-    width:70%;
-    margin:auto;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:30px;
-    margin-top:50px;
+.assisted h2 {
+    font-family:'Playfair Display';
+    font-size:48px;
 }
  
-.why-box {
-    background:#eae6df;
-    padding:35px;
-    text-align:left;
-    transition:0.3s;
+.assisted .subtitle {
+    margin-bottom:10px;
 }
  
-.why-box:hover {
-    transform:translateY(-5px);
+.assisted p {
+    max-width:700px;
+    margin:20px auto;
+    line-height:1.8;
 }
  
 /* CONTACT */
@@ -243,48 +175,18 @@ body {
     width:85%;
     margin:auto;
     display:flex;
-    gap:70px;
+    gap:80px;
 }
- 
-.left { width:40%; }
-.right { width:60%; }
  
 .label {
     color:#C2A85A;
     font-size:12px;
     margin-top:25px;
-    letter-spacing:1px;
 }
  
 .value {
-    margin-top:6px;
-    line-height:1.7;
-}
- 
-input, textarea {
-    width:100%;
-    padding:13px;
-    margin-top:12px;
-    background:transparent;
-    border:1px solid rgba(255,255,255,0.2);
-    color:white;
-}
- 
-textarea { height:130px; }
- 
-button {
-    margin-top:20px;
-    width:100%;
-    padding:15px;
-    background:#C2A85A;
-    border:none;
-    color:#1f3a2c;
-    letter-spacing:1px;
-    transition:0.3s;
-}
- 
-button:hover {
-    transform:translateY(-2px);
+    margin-top:5px;
+    font-size:16px;
 }
  
 /* FOOTER */
@@ -293,13 +195,6 @@ button:hover {
     color:#aaa;
     text-align:center;
     padding:40px;
-    font-size:13px;
-}
- 
-/* ANIMATION */
-@keyframes fadeUp {
-    from { opacity:0; transform:translateY(20px); }
-    to { opacity:1; transform:translateY(0); }
 }
  
 </style>
@@ -309,10 +204,12 @@ button:hover {
  
 <div class="nav">
     <div class="nav-inner">
-        <div class="logo">OLIVE PARTNERS LIMITED</div>
+        <div class="logo">
+            OLIVE PARTNERS
+            <span>LIMITED</span>
+        </div>
         <div>
             <a href="#">HOME</a>
-            <a href="#about">ABOUT</a>
             <a href="#cards">STRATEGY</a>
             <a href="#assisted">ASSISTED LIVING</a>
             <a href="#contact" class="btn-nav">CONTACT</a>
@@ -322,67 +219,44 @@ button:hover {
  
 <div class="hero">
     <div class="container">
-        <h1>
-            Investing in the Future of<br>
-            <span class="gold">British Residential Property</span>
-        </h1>
-        <p>
-        Olive Partners Limited acquires, manages, and stewards high-quality residential real estate across the United Kingdom with a disciplined, long-term approach.
-        </p>
+        <h1>Investing in the Future of<br><span class="gold">British Residential Property</span></h1>
+        <p>Olive Partners Limited acquires and manages high-quality residential real estate across the UK with a disciplined long-term approach.</p>
         <a href="#cards" class="btn">EXPLORE OUR STRATEGY</a>
     </div>
 </div>
  
-<div class="strip">
-    <div class="strip-inner">
-        <div>UK-Focused</div>
-        <div>Long-Term</div>
-        <div>Responsible</div>
-        <div>Trusted</div>
-    </div>
-</div>
- 
-<div class="about" id="about">
-    <div class="about-inner">
-        <img src=https://images.unsplash.com/photo-1600585154340-be6161a56a0c>
-        <div class="about-text">
-            <h2>A Disciplined Approach to Residential Real Estate</h2>
-            <p>
-            Olive Partners Limited is a privately owned UK property company focused on long-term ownership and professional management of residential assets.
-            </p>
-        </div>
-    </div>
-</div>
- 
 <div class="cards" id="cards">
-    <h2 style="font-family:Playfair Display;font-weight:400;">Our Investment Philosophy</h2>
+    <div class="subtitle">INVESTMENT PHILOSOPHY</div>
+    <h2 style="font-family:Playfair Display;">Our Investment Philosophy</h2>
+ 
     <div class="card-grid">
-        <div class="card"><h3>Quality Asset Acquisition</h3></div>
-        <div class="card"><h3>Professional Asset Management</h3></div>
-        <div class="card"><h3>Structured Partnerships</h3></div>
+        <div class="card">
+            <h3>Quality Asset Acquisition</h3>
+        </div>
+        <div class="card">
+            <h3>Professional Asset Management</h3>
+        </div>
+        <div class="card">
+            <h3>Structured Partnerships</h3>
+        </div>
     </div>
 </div>
  
 <div class="assisted" id="assisted">
     <div class="container">
-        <h1>Assisted Living Sector</h1>
-    </div>
-</div>
- 
-<div class="why">
-    <h2 style="font-family:Playfair Display;font-weight:400;">Why Work With Olive Partners</h2>
-    <div class="why-grid">
-        <div class="why-box">Experienced Principals</div>
-        <div class="why-box">Long-Term Perspective</div>
-        <div class="why-box">Transparent Structures</div>
-        <div class="why-box">Responsible Ownership</div>
+        <div class="subtitle">EXPANDING OUR PORTFOLIO</div>
+        <h2>Assisted Living Sector</h2>
+        <p>
+        Olive Partners Limited is actively expanding its presence in the assisted living sector, recognising the growing demand for high-quality supported housing across the UK. We work with specialist operators to deliver accommodation that supports residents with dignity and care.
+        </p>
+        <a href="#contact" class="btn">FIND OUT MORE</a>
     </div>
 </div>
  
 <div class="contact" id="contact">
     <div class="contact-grid">
-        <div class="left">
-            <h2 style="font-family:Playfair Display;font-weight:400;">Contact Olive Partners</h2>
+        <div>
+            <h2 style="font-family:Playfair Display;">Contact Olive Partners</h2>
  
             <div class="label">ADDRESS</div>
             <div class="value">
@@ -401,14 +275,11 @@ button:hover {
             <div class="value">
                 info@olivepartners.co.uk
             </div>
-        </div>
  
-        <div class="right">
-            <input placeholder="Full Name">
-            <input placeholder="Email Address">
-            <input placeholder="Phone Number">
-            <textarea placeholder="Message"></textarea>
-            <button>SEND ENQUIRY</button>
+            <div class="label">WEBSITE</div>
+            <div class="value">
+                www.olivepartners.co.uk
+            </div>
         </div>
     </div>
 </div>
