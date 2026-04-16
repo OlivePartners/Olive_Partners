@@ -1,12 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Olive Partners Limited</title>
 
-<link href=https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@300;400&display=swap rel="stylesheet">
-<link href=https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400&display=swap rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
 <style>
 
-@@ -36,14 +36,16 @@
+html { scroll-behavior:smooth; }
+
+body {
+    margin:0;
+    font-family:'Inter', sans-serif;
+}
+
+/* NAV */
+.nav {
+    position:fixed;
+    width:100%;
+    background:#1f3a2c;
+    padding:18px 0;
+    z-index:1000;
+}
+
+.nav-inner {
+    width:88%;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
 .logo {
     font-family:'Playfair Display';
     color:white;
@@ -16,65 +42,74 @@
 
 .logo span {
     display:block;
-    font-size:11px;
-    letter-spacing:3px;
     font-size:12px;
     letter-spacing:4px;
     color:#C2A85A;
-    margin-top:3px;
-    margin-top:2px;
 }
 
 /* NAV LINKS */
-@@ -60,12 +62,6 @@
+.nav a {
+    color:white;
+    text-decoration:none;
+    margin-left:26px;
+    font-size:12px;
+    letter-spacing:1.5px;
+}
+
+.nav a:hover {
     color:#C2A85A;
 }
 
-.btn-nav {
-    background:#C2A85A;
-    padding:9px 18px;
-    color:#1f3a2c !important;
-}
- 
 /* HERO */
 .hero {
     height:100vh;
-@@ -85,7 +81,7 @@
+    background:linear-gradient(rgba(20,40,25,0.75), rgba(20,40,25,0.75)),
+    url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c');
+    background-size:cover;
+    display:flex;
+    align-items:center;
+    color:white;
+}
+
+.container {
+    width:88%;
+    margin:auto;
+}
+
 .hero h1 {
     font-family:'Playfair Display';
     font-size:64px;
-    font-weight:400;
     font-weight:500;
+    letter-spacing:0.5px;
 }
 
 .gold { color:#C2A85A; }
-@@ -105,11 +101,11 @@
-    color:#1f3a2c;
-}
 
-/* CARDS */
-.cards {
 /* SECTION */
 .section {
     padding:140px 0;
     background:#f5f3ef;
     text-align:center;
-    background:#f5f3ef;
+    scroll-margin-top:120px;
 }
 
 .subtitle {
-@@ -118,8 +114,9 @@
+    color:#C2A85A;
+    font-size:12px;
     letter-spacing:2px;
 }
 
 /* CARDS */
 .card-grid {
-    width:80%;
     width:85%;
     margin:60px auto 0;
     display:flex;
     justify-content:center;
-@@ -131,10 +128,12 @@
+    gap:40px;
+}
+
+.card {
+    background:white;
     padding:40px;
     width:300px;
     border-top:3px solid #C2A85A;
@@ -83,43 +118,48 @@
 
 .card h3 {
     font-family:'Playfair Display';
-    margin-bottom:10px;
 }
 
 /* ASSISTED */
-@@ -154,16 +153,6 @@
-    font-size:48px;
+.assisted {
+    height:80vh;
+    background:linear-gradient(rgba(20,40,25,0.8), rgba(20,40,25,0.8)),
+    url('assisted-living.jpg');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    color:white;
+    text-align:center;
+    scroll-margin-top:120px;
 }
 
-.assisted .subtitle {
-    margin-bottom:10px;
-}
- 
-.assisted p {
-    max-width:700px;
-    margin:20px auto;
-    line-height:1.8;
-}
- 
 /* CONTACT */
 .contact {
     background:#1f3a2c;
-@@ -178,6 +167,14 @@
+    color:white;
+    padding:140px 0;
+    scroll-margin-top:120px;
+}
+
+.contact-grid {
+    width:85%;
+    margin:auto;
+    display:flex;
     gap:80px;
 }
 
-.contact-left {
-    width:40%;
-}
- 
-.contact-right {
-    width:60%;
-}
- 
+.contact-left { width:40%; }
+.contact-right { width:60%; }
+
 .label {
     color:#C2A85A;
     font-size:12px;
-@@ -189,6 +186,24 @@
+    margin-top:25px;
+}
+
+.value {
+    margin-top:5px;
     font-size:16px;
 }
 
@@ -132,98 +172,130 @@ input, textarea {
     border:1px solid rgba(255,255,255,0.2);
     color:white;
 }
- 
+
 button {
     background:#C2A85A;
     border:none;
-    padding:16px;
-    width:100%;
+    padding:14px 28px;
     cursor:pointer;
+    display:block;
+    margin-left:auto;
 }
- 
-/* FOOTER */
-.footer {
-    background:#111;
-@@ -210,9 +225,9 @@
-        </div>
-        <div>
-            <a href="#">HOME</a>
-            <a href="#cards">STRATEGY</a>
-            <a href="#strategy">STRATEGY</a>
-            <a href="#assisted">ASSISTED LIVING</a>
-            <a href="#contact" class="btn-nav">CONTACT</a>
-            <a href="#contact">CONTACT</a>
-        </div>
-    </div>
-</div>
-@@ -221,23 +236,29 @@
-    <div class="container">
-        <h1>Investing in the Future of<br><span class="gold">British Residential Property</span></h1>
-        <p>Olive Partners Limited acquires and manages high-quality residential real estate across the UK with a disciplined long-term approach.</p>
-        <a href="#cards" class="btn">EXPLORE OUR STRATEGY</a>
-        <a href="#strategy" class="btn">EXPLORE OUR STRATEGY</a>
-    </div>
+
+/* MOBILE */
+@media(max-width:768px){
+    .card-grid { flex-direction:column; align-items:center; }
+    .contact-grid { flex-direction:column; }
+    .contact-left, .contact-right { width:100%; }
+    .hero h1 { font-size:36px; }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="nav">
+<div class="nav-inner">
+<div class="logo">
+OLIVE PARTNERS
+<span>LIMITED</span>
 </div>
 
-<div class="cards" id="cards">
+<div>
+<a href="#">HOME</a>
+<a href="#strategy">STRATEGY</a>
+<a href="#assisted">ASSISTED LIVING</a>
+<a href="#contact">CONTACT</a>
+</div>
+</div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+<div class="container">
+<h1>Investing in the Future of<br><span class="gold">British Residential Property</span></h1>
+</div>
+</div>
+
+<!-- STRATEGY -->
 <div class="section" id="strategy">
-    <div class="subtitle">INVESTMENT PHILOSOPHY</div>
-    <h2 style="font-family:Playfair Display;">Our Investment Philosophy</h2>
-    <p>We apply a rigorous, research-driven framework to every acquisition and management decision.</p>
+<div class="subtitle">INVESTMENT PHILOSOPHY</div>
+<h2 style="font-family:Playfair Display;">Our Investment Philosophy</h2>
 
-    <div class="card-grid">
-        <div class="card">
-            <h3>Quality Asset Acquisition</h3>
-            <p>We target well-located residential properties with strong fundamentals, sustainable demand, and long-term capital preservation characteristics.</p>
-        </div>
- 
-        <div class="card">
-            <h3>Professional Asset Management</h3>
-            <p>Every property in our portfolio is managed to the highest professional standards, ensuring compliance, tenant welfare, and asset integrity.</p>
-        </div>
- 
-        <div class="card">
-            <h3>Structured Partnerships</h3>
-            <p>We work with trusted agents, advisers, and operating partners through clear, transparent structures that align incentives and deliver results.</p>
-        </div>
-    </div>
-</div>
-@@ -247,15 +268,15 @@ <h3>Structured Partnerships</h3>
-        <div class="subtitle">EXPANDING OUR PORTFOLIO</div>
-        <h2>Assisted Living Sector</h2>
-        <p>
-        Olive Partners Limited is actively expanding its presence in the assisted living sector, recognising the growing demand for high-quality supported housing across the UK. We work with specialist operators to deliver accommodation that supports residents with dignity and care.
-        Olive Partners Limited is actively developing its presence in the assisted living space — recognising the growing demand for high-quality supported housing across the UK.
-        </p>
-        <a href="#contact" class="btn">FIND OUT MORE</a>
-    </div>
+<div class="card-grid">
+<div class="card">
+<h3>Quality Asset Acquisition</h3>
+<p>We target well-located residential properties with strong fundamentals, sustainable demand, and long-term capital preservation characteristics.</p>
 </div>
 
+<div class="card">
+<h3>Professional Asset Management</h3>
+<p>Every property in our portfolio is managed to the highest professional standards, ensuring compliance, tenant welfare, and asset integrity.</p>
+</div>
+
+<div class="card">
+<h3>Structured Partnerships</h3>
+<p>We work with trusted agents, advisers, and operating partners through clear, transparent structures that align incentives and deliver results.</p>
+</div>
+</div>
+</div>
+
+<!-- ASSISTED -->
+<div class="assisted" id="assisted">
+<div class="container">
+<h2 style="font-family:Playfair Display;">Assisted Living Sector</h2>
+<p>
+Olive Partners Ltd develops high-quality residential properties purpose-designed for supported and assisted living. We work closely with care providers to deliver safe, compliant, and adaptable homes that meet real local needs—supporting long-term tenancy and sustainable outcomes.
+</p>
+</div>
+</div>
+
+<!-- CONTACT -->
 <div class="contact" id="contact">
-    <div class="contact-grid">
-        <div>
- 
-        <div class="contact-left">
-            <h2 style="font-family:Playfair Display;">Contact Olive Partners</h2>
+<div class="contact-grid">
 
-            <div class="label">ADDRESS</div>
-@@ -275,12 +296,16 @@ <h2 style="font-family:Playfair Display;">Contact Olive Partners</h2>
-            <div class="value">
-                info@olivepartners.co.uk
-            </div>
-        </div>
+<div class="contact-left">
+<h2 style="font-family:Playfair Display;">Contact Olive Partners</h2>
 
-            <div class="label">WEBSITE</div>
-            <div class="value">
-                www.olivepartners.co.uk
-            </div>
-        <div class="contact-right">
-            <input placeholder="Full Name">
-            <input placeholder="Email Address">
-            <input placeholder="Phone Number">
-            <textarea placeholder="Message"></textarea>
-            <button>SEND ENQUIRY</button>
-        </div>
- 
-    </div>
+<div class="label">ADDRESS</div>
+<div class="value">
+13 Stilwell Drive<br>
+Uxbridge, UB8 3WF<br>
+United Kingdom
 </div>
+
+<div class="label">TELEPHONE</div>
+<div class="value">
+07930187711<br>
+07961747621
+</div>
+
+<div class="label">EMAIL</div>
+<div class="value">
+info@olivepartners.co.uk
+</div>
+
+</div>
+
+<div class="contact-right">
+
+<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" onsubmit="setTimeout(()=>this.reset(),1000)">
+
+<input type="text" name="name" placeholder="Full Name" required>
+<input type="email" name="email" placeholder="Email Address" required>
+<input type="tel" name="phone" placeholder="Phone Number">
+<input type="text" name="subject" placeholder="Subject">
+<textarea name="message" placeholder="Message" required></textarea>
+
+<button type="submit">SEND ENQUIRY</button>
+
+</form>
+
+</div>
+
+</div>
+</div>
+
+</body>
+</html>
