@@ -32,7 +32,7 @@ z-index:1000;
 .logo{
 font-family:'Playfair Display';
 color:white;
-font-size:20px;
+font-size:22px;
 }
 .logo span{
 display:block;
@@ -76,14 +76,19 @@ font-family:'Playfair Display';
 font-size:64px;
 color:white;
 max-width:700px;
+line-height:1.2;
 }
 
 .gold{color:#c8a44d}
 
 /* SECTION */
 .section{
-padding:140px 0;
+padding:160px 0;
 text-align:center;
+}
+
+.alt{
+background:white;
 }
 
 .subtitle{
@@ -92,7 +97,6 @@ font-size:12px;
 letter-spacing:2px;
 }
 
-/* ABOUT */
 .text{
 max-width:800px;
 margin:20px auto;
@@ -128,26 +132,37 @@ url('https://images.unsplash.com/photo-1576765607924-bb9d0a7b88d5?q=80&w=1600');
 background-size:cover;
 display:flex;
 align-items:center;
-color:white;
 text-align:center;
+color:white;
 }
 
 /* CONTACT */
 .contact{
 background:#1c3527;
 color:white;
-padding:140px 0;
+padding:160px 0;
 }
 
 .contact-grid{
 width:85%;
 margin:auto;
 display:flex;
-gap:60px;
+gap:80px;
 }
 
 .left{width:40%}
 .right{width:60%}
+
+.label{
+color:#c8a44d;
+font-size:12px;
+margin-top:20px;
+letter-spacing:1px;
+}
+
+.value{
+margin-top:5px;
+}
 
 input,textarea{
 width:100%;
@@ -164,6 +179,14 @@ color:#1c3527;
 padding:16px;
 width:100%;
 border:none;
+cursor:pointer;
+}
+
+/* SUCCESS MESSAGE */
+#successMessage{
+display:none;
+color:#c8a44d;
+margin-top:15px;
 }
 
 /* MOBILE */
@@ -200,21 +223,13 @@ nav{margin-top:10px}
 </div>
 
 <!-- ABOUT -->
-<div class="section" id="about">
+<div class="section alt" id="about">
 <div class="subtitle">ABOUT OLIVE PARTNERS</div>
 
 <h2 style="font-family:Playfair Display;">A Disciplined, Long-Term Investment Approach</h2>
 
 <p class="text">
-Olive Partners Limited is a privately owned UK property investment company focused on the acquisition, management, and long-term stewardship of residential real estate assets. The company operates with a disciplined approach, prioritising capital preservation, income stability, and sustainable long-term value creation.
-</p>
-
-<p class="text">
-We focus on assets supported by strong underlying fundamentals, including location quality, tenant demand, and long-term resilience. Rather than pursuing short-term gains, our strategy is centred on long-term ownership and operational excellence.
-</p>
-
-<p class="text">
-Working alongside trusted agents, advisers, and operating partners, we ensure assets are managed efficiently, responsibly, and in accordance with applicable standards.
+Olive Partners Ltd is a UK property investment company focused on delivering high-quality homes where demand is strongest. We invest with discipline, refurbish with purpose, and partner for the long term—creating well-run residential assets that generate sustainable value for tenants, operators, and investors.
 </p>
 </div>
 
@@ -251,11 +266,13 @@ We apply a rigorous, research-driven framework to every acquisition and manageme
 <!-- ASSISTED -->
 <div class="assisted" id="assisted">
 <div class="container">
+
 <h2 style="font-family:Playfair Display;">Assisted Living Sector</h2>
 
 <p class="text">
-Olive Partners Limited is actively developing its presence in the assisted living sector, recognising the growing demand for high-quality supported housing across the UK. We partner with specialist operators to deliver accommodation that supports residents with dignity and care.
+Olive Partners Ltd develops high-quality residential properties purpose-designed for supported and assisted living. We work closely with care providers to deliver safe, compliant, and adaptable homes that meet real local needs—supporting long-term tenancy, operational stability, and sustainable outcomes for residents, operators.
 </p>
+
 </div>
 </div>
 
@@ -266,22 +283,68 @@ Olive Partners Limited is actively developing its presence in the assisted livin
 <div class="left">
 <h2 style="font-family:Playfair Display;">Contact Olive Partners</h2>
 
-<p>13 Stilwell Drive<br>Uxbridge, UB8 3WF</p>
-<p>07930187711<br>07961747621</p>
-<p>info@olivepartners.co.uk</p>
+<div class="label">ADDRESS</div>
+<div class="value">
+13 Stilwell Drive<br>
+Uxbridge, UB8 3WF<br>
+United Kingdom
+</div>
+
+<div class="label">TELEPHONE</div>
+<div class="value">
+07930187711<br>
+07961747621
+</div>
+
+<div class="label">EMAIL</div>
+<div class="value">
+info@olivepartners.co.uk
+</div>
+
 </div>
 
 <div class="right">
-<form action="https://formspree.io/f/YOURID" method="POST">
+<form id="contactForm" action="https://formspree.io/f/YOURID" method="POST">
+
 <input name="name" placeholder="Full Name" required>
 <input name="email" placeholder="Email Address" required>
 <textarea name="message" placeholder="Message" required></textarea>
+
 <button type="submit">Send Enquiry</button>
+
 </form>
+
+<p id="successMessage">Thank you — your enquiry has been sent.</p>
+
 </div>
 
 </div>
 </div>
+
+<!-- SCRIPT -->
+<script>
+const form = document.getElementById('contactForm');
+const successMessage = document.getElementById('successMessage');
+
+form.addEventListener('submit', async function(e) {
+e.preventDefault();
+
+const data = new FormData(form);
+
+const response = await fetch(form.action, {
+method: form.method,
+body: data,
+headers: { 'Accept': 'application/json' }
+});
+
+if (response.ok) {
+form.reset();
+successMessage.style.display = 'block';
+} else {
+alert("Something went wrong.");
+}
+});
+</script>
 
 </body>
 </html>
