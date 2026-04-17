@@ -31,7 +31,7 @@ margin:auto;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:16px 0;
+padding:18px 0;
 }
 
 .logo {
@@ -79,24 +79,16 @@ line-height:1.2;
 
 .gold { color:#C2A85A; }
 
-/* SECTION */
+/* SECTIONS */
 .section {
-padding:140px 20px;
+padding:160px 20px;
 text-align:center;
 background:#f5f3ef;
-scroll-margin-top:120px;
+scroll-margin-top:140px;
 }
 
-/* FADE-IN */
-.fade {
-opacity:0;
-transform:translateY(30px);
-transition: all 0.8s ease;
-}
-
-.fade.show {
-opacity:1;
-transform:translateY(0);
+.section:nth-child(even){
+background:white;
 }
 
 /* ABOUT */
@@ -129,9 +121,9 @@ font-family:'Playfair Display';
 
 /* ASSISTED */
 .assisted {
-min-height:500px;
+min-height:600px;
 background:
-linear-gradient(rgba(31,58,44,0.82), rgba(31,58,44,0.82)),
+linear-gradient(rgba(31,58,44,0.85), rgba(31,58,44,0.85)),
 url('https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=1600&auto=format&fit=crop');
 background-size:cover;
 background-position:center;
@@ -146,8 +138,8 @@ text-align:center;
 .contact {
 background:#1f3a2c;
 color:white;
-padding:140px 20px;
-scroll-margin-top:120px;
+padding:160px 20px;
+scroll-margin-top:140px;
 }
 
 .contact-grid {
@@ -196,6 +188,8 @@ margin-left:auto;
 
 .hero h1 { font-size:34px; }
 
+.section { padding:100px 20px; }
+
 .contact-grid {
 flex-direction:column;
 }
@@ -227,11 +221,11 @@ width:100%;
 
 <!-- HERO -->
 <div class="hero" id="home">
-<h1 class="fade">Investing in the Future of<br><span class="gold">British Residential Property</span></h1>
+<h1>Investing in the Future of<br><span class="gold">British Residential Property</span></h1>
 </div>
 
 <!-- ABOUT -->
-<div class="section about fade" id="about">
+<div class="section about" id="about">
 <h2 style="font-family:Playfair Display;">About Olive Partners</h2>
 <p>
 Olive Partners Ltd is a UK property investment company focused on delivering high-quality homes where demand is strongest. We invest with discipline, refurbish with purpose, and partner for the long term—creating well-run residential assets.
@@ -239,42 +233,40 @@ Olive Partners Ltd is a UK property investment company focused on delivering hig
 </div>
 
 <!-- STRATEGY -->
-<div class="section fade" id="strategy">
+<div class="section" id="strategy">
 <h2 style="font-family:Playfair Display;">Our Investment Philosophy</h2>
 <p>We apply a rigorous, research-driven framework to every acquisition and management decision.</p>
 
 <div class="card-grid">
-
 <div class="card">
 <h3>Quality Asset Acquisition</h3>
-<p>We target well-located residential properties with strong fundamentals, sustainable demand, and long-term capital preservation characteristics.</p>
+<p>We target well-located residential properties with strong fundamentals.</p>
 </div>
 
 <div class="card">
 <h3>Professional Asset Management</h3>
-<p>Every property in our portfolio is managed to the highest professional standards.</p>
+<p>Every property is managed to the highest professional standards.</p>
 </div>
 
 <div class="card">
 <h3>Structured Partnerships</h3>
-<p>We work with trusted partners through clear, transparent structures.</p>
+<p>We work with trusted partners through clear structures.</p>
 </div>
-
 </div>
 </div>
 
 <!-- ASSISTED -->
-<div class="section assisted fade" id="assisted">
+<div class="section assisted" id="assisted">
 <div>
 <h2 style="font-family:Playfair Display;">Assisted Living Sector</h2>
 <p>
-Olive Partners Ltd develops high-quality residential properties purpose-designed for supported and assisted living. We work closely with care providers to deliver safe, compliant, and adaptable homes that meet real local needs.
+Olive Partners Ltd develops high-quality residential properties purpose-designed for supported and assisted living.
 </p>
 </div>
 </div>
 
 <!-- CONTACT -->
-<div class="contact fade" id="contact">
+<div class="contact" id="contact">
 <div class="contact-grid">
 
 <div class="contact-left">
@@ -305,22 +297,6 @@ Olive Partners Ltd develops high-quality residential properties purpose-designed
 
 </div>
 </div>
-
-<!-- FADE SCRIPT -->
-<script>
-const elements = document.querySelectorAll('.fade');
-
-window.addEventListener('scroll', () => {
-elements.forEach(el => {
-const position = el.getBoundingClientRect().top;
-const screenPosition = window.innerHeight / 1.2;
-
-if(position < screenPosition){
-el.classList.add('show');
-}
-});
-});
-</script>
 
 </body>
 </html>
