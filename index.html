@@ -3,11 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Olive Partners Limited</title>
+
+<title>Olive Partners Ltd | UK Property Investment</title>
 
 <meta name="google-site-verification" content="P7ISeR9hVyzUc2z0EHbBKAsmpiN1JEfkyzPgIg2_Ex4" />
-  
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+<meta name="description" content="Olive Partners Ltd is a UK property company focused on high-quality residential investment, refurbishment and asset management.">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
 <style>
 
@@ -74,13 +76,15 @@ color:white;
 
 .hero h1 {
 font-family:'Playfair Display';
-font-size:60px;
+font-size:64px;
+font-weight:600;
+letter-spacing:-0.5px;
 line-height:1.2;
 }
 
 .gold { color:#C2A85A; }
 
-/* SECTION (FIXED SPACING) */
+/* SECTION */
 .section {
 padding:200px 20px 140px;
 text-align:center;
@@ -97,9 +101,7 @@ border-bottom:1px solid rgba(0,0,0,0.05);
 }
 
 /* ABOUT */
-#about {
-padding-bottom:220px;
-}
+#about { padding-bottom:220px; }
 
 .about p {
 max-width:800px;
@@ -108,9 +110,7 @@ line-height:1.9;
 }
 
 /* STRATEGY */
-#strategy {
-padding-top:180px;
-}
+#strategy { padding-top:180px; }
 
 /* CARDS */
 .card-grid {
@@ -133,12 +133,12 @@ text-align:left;
 font-family:'Playfair Display';
 }
 
-/* ASSISTED */
+/* ASSISTED (IMPROVED IMAGE) */
 .assisted {
 min-height:600px;
 background:
-linear-gradient(rgba(31,58,44,0.85), rgba(31,58,44,0.85)),
-url('https://images.unsplash.com/photo-1584515933487-779824d29309?q=80&w=1600&auto=format&fit=crop');
+linear-gradient(rgba(31,58,44,0.88), rgba(31,58,44,0.88)),
+url('https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?q=80&w=1600&auto=format&fit=crop');
 background-size:cover;
 background-position:center;
 display:flex;
@@ -153,38 +153,27 @@ max-width:800px;
 line-height:1.9;
 }
 
-/* CONTACT (UPGRADED) */
+/* CONTACT (SIMPLIFIED & ELITE) */
 .contact {
-background:
-linear-gradient(rgba(31,58,44,0.95), rgba(31,58,44,0.95)),
-url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1600&auto=format&fit=crop');
-background-size:cover;
-background-position:center;
+background:#1f3a2c;
 color:white;
 padding:160px 20px;
-scroll-margin-top:140px;
 }
 
 .contact-grid {
 display:flex;
 gap:60px;
-max-width:1100px;
+max-width:1000px;
 margin:auto;
 }
 
 .contact-left {
 width:40%;
-border-right:1px solid rgba(255,255,255,0.08);
-padding-right:40px;
 }
 
 .contact-right {
 width:50%;
-max-width:500px;
-background:rgba(255,255,255,0.03);
-padding:30px;
-border-radius:6px;
-border:1px solid rgba(255,255,255,0.08);
+max-width:420px;
 }
 
 .label {
@@ -201,47 +190,31 @@ line-height:1.6;
 
 input, textarea {
 width:100%;
-padding:16px;
-margin-bottom:18px;
+padding:14px;
+margin-bottom:16px;
 background:transparent;
 border:1px solid rgba(255,255,255,0.2);
 color:white;
-font-size:14px;
-}
-
-input:focus, textarea:focus {
-outline:none;
-border-color:#C2A85A;
 }
 
 button {
 background:#C2A85A;
 border:none;
-padding:14px 32px;
+padding:12px 28px;
 cursor:pointer;
 display:block;
 margin-left:auto;
-transition:0.3s;
-}
-
-button:hover {
-background:#d4b96a;
 }
 
 /* MOBILE */
 @media(max-width:768px){
 
-.hero h1 { font-size:34px; }
+.hero h1 { font-size:36px; }
 
 .section { padding:100px 20px; }
 
 .contact-grid {
 flex-direction:column;
-}
-
-.contact-left {
-border-right:none;
-padding-right:0;
 }
 
 .contact-left, .contact-right {
@@ -255,7 +228,6 @@ width:100%;
 
 <body>
 
-<!-- NAV -->
 <div class="nav">
 <div class="nav-inner">
 <div class="logo">OLIVE PARTNERS<span>LIMITED</span></div>
@@ -269,84 +241,55 @@ width:100%;
 </div>
 </div>
 
-<!-- HERO -->
 <div class="hero" id="home">
 <h1>Investing in the Future of<br><span class="gold">British Residential Property</span></h1>
 </div>
 
-<!-- ABOUT -->
 <div class="section about" id="about">
 <h2 style="font-family:Playfair Display;">About Olive Partners</h2>
 <p>
-Olive Partners Ltd is a UK property company focused on the creation and stewardship of high-quality residential assets in markets with enduring demand. We adopt a disciplined, selective approach to acquisition and refurbishment, underpinned by strong fundamentals and long-term thinking, to deliver resilient homes characterised by quality, longevity, and consistency.
+Olive Partners Ltd is a UK property company focused on the creation and stewardship of high-quality residential assets in markets with enduring demand.
 </p>
 </div>
 
-<!-- STRATEGY -->
 <div class="section" id="strategy">
 <h2 style="font-family:Playfair Display;">Our Investment Philosophy</h2>
-<p>We apply a rigorous, research-driven framework to every acquisition and management decision.</p>
 
 <div class="card-grid">
-<div class="card">
-<h3>Quality Asset Acquisition</h3>
-<p>We target well-located residential properties with strong fundamentals.</p>
-</div>
-
-<div class="card">
-<h3>Professional Asset Management</h3>
-<p>Every property is managed to the highest professional standards.</p>
-</div>
-
-<div class="card">
-<h3>Structured Partnerships</h3>
-<p>We work with trusted partners through clear structures.</p>
-</div>
+<div class="card"><h3>Quality Asset Acquisition</h3></div>
+<div class="card"><h3>Professional Asset Management</h3></div>
+<div class="card"><h3>Structured Partnerships</h3></div>
 </div>
 </div>
 
-<!-- ASSISTED -->
 <div class="section assisted" id="assisted">
 <div>
 <h2 style="font-family:Playfair Display;">Assisted Living</h2>
 <p>
-Olive Partners Ltd develops high-quality residential properties purpose-designed for supported and assisted living. We work closely with care providers to deliver safe, compliant, and adaptable homes that meet real local needs—supporting long-term tenancy, operational stability, and sustainable outcomes for residents and operators.
+Purpose-designed homes delivered with care, dignity, and long-term operational stability.
 </p>
 </div>
 </div>
 
-<!-- CONTACT -->
 <div class="contact" id="contact">
 <div class="contact-grid">
 
 <div class="contact-left">
-<h2 style="font-family:Playfair Display;">Contact Olive Partners</h2>
-
-<p style="margin-top:20px; max-width:400px; line-height:1.7;">
-We welcome enquiries from individuals, operators, and partners. Please use the form and a member of our team will respond promptly.
-</p>
+<h2 style="font-family:Playfair Display;">Contact</h2>
 
 <div class="label">ADDRESS</div>
-<div class="value">13 Stilwell Drive<br>Uxbridge, UB8 3WF<br>United Kingdom</div>
+<div class="value">13 Stilwell Drive<br>Uxbridge, UB8 3WF</div>
 
 <div class="label">TELEPHONE</div>
-<div class="value">07930187711<br>07961747621</div>
-
-<div class="label">WEBSITE</div>
-<div class="value">www.olivepartners.co.uk</div>
-
-<p style="margin-top:40px; font-size:13px; opacity:0.7;">
-All enquiries are handled confidentially.
-</p>
+<div class="value">07930187711</div>
 </div>
 
 <div class="contact-right">
-<form action="https://formspree.io/f/mbdqgqzl" method="POST" onsubmit="setTimeout(()=>this.reset(),1000)">
+<form action="https://formspree.io/f/mbdqgqzl" method="POST">
 <input name="name" placeholder="Full Name" required>
 <input name="email" placeholder="Email Address" required>
-<input name="phone" placeholder="Phone Number">
 <textarea name="message" placeholder="Message" required></textarea>
-<button type="submit">SEND ENQUIRY</button>
+<button>SEND</button>
 </form>
 </div>
 
