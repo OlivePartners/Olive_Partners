@@ -5,189 +5,208 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Olive Partners Limited</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
 <style>
 
 html { scroll-behavior:smooth; }
 
 body {
-    margin:0;
-    font-family:'Inter', sans-serif;
+margin:0;
+font-family:'Inter', sans-serif;
 }
 
 /* NAV */
 .nav {
-    position:fixed;
-    width:100%;
-    background:#1f3a2c;
-    padding:18px 0;
-    z-index:1000;
+position:fixed;
+width:100%;
+background:#1f3a2c;
+z-index:1000;
 }
 
 .nav-inner {
-    width:88%;
-    margin:auto;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+width:88%;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:16px 0;
+flex-wrap:wrap;
 }
 
 .logo {
-    font-family:'Playfair Display';
-    color:white;
-    font-size:20px;
-    letter-spacing:1px;
+font-family:'Playfair Display';
+color:white;
+font-size:20px;
 }
 
 .logo span {
-    display:block;
-    font-size:12px;
-    letter-spacing:4px;
-    color:#C2A85A;
+display:block;
+font-size:11px;
+letter-spacing:3px;
+color:#C2A85A;
 }
 
 /* NAV LINKS */
-.nav a {
-    color:white;
-    text-decoration:none;
-    margin-left:26px;
-    font-size:12px;
-    letter-spacing:1.5px;
+.nav-links {
+display:flex;
+gap:20px;
 }
 
-.nav a:hover {
-    color:#C2A85A;
+.nav-links a {
+color:white;
+text-decoration:none;
+font-size:12px;
 }
 
 /* HERO */
 .hero {
-    height:100vh;
-    background:linear-gradient(rgba(20,40,25,0.75), rgba(20,40,25,0.75)),
-    url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c');
-    background-size:cover;
-    display:flex;
-    align-items:center;
-    color:white;
-}
-
-.container {
-    width:88%;
-    margin:auto;
+height:100vh;
+background:
+linear-gradient(rgba(31,58,44,0.7), rgba(31,58,44,0.7)),
+url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1600&auto=format&fit=crop');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+padding:0 20px;
 }
 
 .hero h1 {
-    font-family:'Playfair Display';
-    font-size:64px;
-    font-weight:500;
-    letter-spacing:0.5px;
+font-family:'Playfair Display';
+font-size:52px;
+line-height:1.2;
 }
 
 .gold { color:#C2A85A; }
 
-/* SECTION */
+/* SECTIONS */
 .section {
-    padding:140px 0;
-    background:#f5f3ef;
-    text-align:center;
-    scroll-margin-top:120px;
+padding:120px 20px;
+text-align:center;
+background:#f5f3ef;
 }
 
-.subtitle {
-    color:#C2A85A;
-    font-size:12px;
-    letter-spacing:2px;
+.about p, .section p {
+max-width:700px;
+margin:auto;
+line-height:1.8;
 }
 
 /* CARDS */
 .card-grid {
-    width:85%;
-    margin:60px auto 0;
-    display:flex;
-    justify-content:center;
-    gap:40px;
+display:flex;
+gap:25px;
+justify-content:center;
+margin-top:50px;
+flex-wrap:wrap;
 }
 
 .card {
-    background:white;
-    padding:40px;
-    width:300px;
-    border-top:3px solid #C2A85A;
-    text-align:left;
+background:white;
+padding:30px;
+width:300px;
+border-top:3px solid #C2A85A;
+text-align:left;
 }
 
 .card h3 {
-    font-family:'Playfair Display';
+font-family:'Playfair Display';
 }
 
 /* ASSISTED */
 .assisted {
-    height:80vh;
-    background:linear-gradient(rgba(20,40,25,0.8), rgba(20,40,25,0.8)),
-    url('assisted-living.jpg');
-    background-size:cover;
-    background-position:center;
-    display:flex;
-    align-items:center;
-    color:white;
-    text-align:center;
-    scroll-margin-top:120px;
+background:
+linear-gradient(rgba(31,58,44,0.8), rgba(31,58,44,0.8)),
+url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=1600&auto=format&fit=crop');
+background-size:cover;
+background-position:center;
+color:white;
 }
 
 /* CONTACT */
 .contact {
-    background:#1f3a2c;
-    color:white;
-    padding:140px 0;
-    scroll-margin-top:120px;
+background:#1f3a2c;
+color:white;
+padding:120px 20px;
 }
 
 .contact-grid {
-    width:85%;
-    margin:auto;
-    display:flex;
-    gap:80px;
+display:flex;
+gap:40px;
+max-width:1100px;
+margin:auto;
 }
 
 .contact-left { width:40%; }
 .contact-right { width:60%; }
 
 .label {
-    color:#C2A85A;
-    font-size:12px;
-    margin-top:25px;
+color:#C2A85A;
+font-size:12px;
+margin-top:20px;
 }
 
 .value {
-    margin-top:5px;
-    font-size:16px;
+margin-top:5px;
+line-height:1.6;
 }
 
 input, textarea {
-    width:100%;
-    padding:14px;
-    margin-top:10px;
-    margin-bottom:20px;
-    background:transparent;
-    border:1px solid rgba(255,255,255,0.2);
-    color:white;
+width:100%;
+padding:14px;
+margin-bottom:15px;
+background:transparent;
+border:1px solid rgba(255,255,255,0.2);
+color:white;
+font-size:14px;
 }
 
 button {
-    background:#C2A85A;
-    border:none;
-    padding:14px 28px;
-    cursor:pointer;
-    display:block;
-    margin-left:auto;
+background:#C2A85A;
+border:none;
+padding:14px;
+width:100%;
+cursor:pointer;
+font-size:14px;
 }
 
-/* MOBILE */
+/* MOBILE OPTIMISATION */
 @media(max-width:768px){
-    .card-grid { flex-direction:column; align-items:center; }
-    .contact-grid { flex-direction:column; }
-    .contact-left, .contact-right { width:100%; }
-    .hero h1 { font-size:36px; }
+
+.nav-inner {
+flex-direction:column;
+align-items:flex-start;
+}
+
+.nav-links {
+flex-wrap:wrap;
+margin-top:10px;
+}
+
+.hero h1 {
+font-size:34px;
+}
+
+.section {
+padding:80px 20px;
+}
+
+.card {
+width:100%;
+}
+
+.contact-grid {
+flex-direction:column;
+}
+
+.contact-left, .contact-right {
+width:100%;
+}
+
 }
 
 </style>
@@ -195,33 +214,39 @@ button {
 
 <body>
 
+<!-- NAV -->
 <div class="nav">
 <div class="nav-inner">
-<div class="logo">
-OLIVE PARTNERS
-<span>LIMITED</span>
-</div>
+<div class="logo">OLIVE PARTNERS<span>LIMITED</span></div>
 
-<div>
-<a href="#">HOME</a>
+<div class="nav-links">
+<a href="#home">HOME</a>
+<a href="#about">ABOUT</a>
 <a href="#strategy">STRATEGY</a>
 <a href="#assisted">ASSISTED LIVING</a>
 <a href="#contact">CONTACT</a>
 </div>
+
 </div>
 </div>
 
 <!-- HERO -->
-<div class="hero">
-<div class="container">
+<div class="hero" id="home">
 <h1>Investing in the Future of<br><span class="gold">British Residential Property</span></h1>
 </div>
+
+<!-- ABOUT -->
+<div class="section about" id="about">
+<h2 style="font-family:Playfair Display;">About Olive Partners</h2>
+<p>
+Olive Partners Ltd is a UK property investment company focused on delivering high-quality homes where demand is strongest. We invest with discipline, refurbish with purpose, and partner for the long term—creating well-run residential assets.
+</p>
 </div>
 
 <!-- STRATEGY -->
 <div class="section" id="strategy">
-<div class="subtitle">INVESTMENT PHILOSOPHY</div>
 <h2 style="font-family:Playfair Display;">Our Investment Philosophy</h2>
+<p>We apply a rigorous, research-driven framework to every acquisition and management decision.</p>
 
 <div class="card-grid">
 <div class="card">
@@ -242,13 +267,11 @@ OLIVE PARTNERS
 </div>
 
 <!-- ASSISTED -->
-<div class="assisted" id="assisted">
-<div class="container">
+<div class="section assisted" id="assisted">
 <h2 style="font-family:Playfair Display;">Assisted Living Sector</h2>
 <p>
-Olive Partners Ltd develops high-quality residential properties purpose-designed for supported and assisted living. We work closely with care providers to deliver safe, compliant, and adaptable homes that meet real local needs—supporting long-term tenancy and sustainable outcomes.
+Olive Partners Ltd develops high-quality residential properties purpose-designed for supported and assisted living. We work closely with care providers to deliver safe, compliant, and adaptable homes that meet real local needs.
 </p>
-</div>
 </div>
 
 <!-- CONTACT -->
@@ -259,39 +282,26 @@ Olive Partners Ltd develops high-quality residential properties purpose-designed
 <h2 style="font-family:Playfair Display;">Contact Olive Partners</h2>
 
 <div class="label">ADDRESS</div>
-<div class="value">
-13 Stilwell Drive<br>
-Uxbridge, UB8 3WF<br>
-United Kingdom
-</div>
+<div class="value">13 Stilwell Drive<br>Uxbridge, UB8 3WF<br>United Kingdom</div>
 
 <div class="label">TELEPHONE</div>
-<div class="value">
-07930187711<br>
-07961747621
-</div>
+<div class="value">07930 187711<br>07961 747621</div>
 
 <div class="label">EMAIL</div>
-<div class="value">
-info@olivepartners.co.uk
-</div>
+<div class="value">info@olivepartners.co.uk</div>
 
+<div class="label">WEBSITE</div>
+<div class="value">www.olivepartners.co.uk</div>
 </div>
 
 <div class="contact-right">
-
-<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" onsubmit="setTimeout(()=>this.reset(),1000)">
-
-<input type="text" name="name" placeholder="Full Name" required>
-<input type="email" name="email" placeholder="Email Address" required>
-<input type="tel" name="phone" placeholder="Phone Number">
-<input type="text" name="subject" placeholder="Subject">
+<form action="https://formspree.io/f/mbdqgqzl" method="POST" onsubmit="this.reset()">
+<input name="name" placeholder="Full Name" required>
+<input name="email" placeholder="Email Address" required>
+<input name="phone" placeholder="Phone Number">
 <textarea name="message" placeholder="Message" required></textarea>
-
 <button type="submit">SEND ENQUIRY</button>
-
 </form>
-
 </div>
 
 </div>
