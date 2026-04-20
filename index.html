@@ -116,21 +116,20 @@ scroll-margin-top:90px;
 .light { background:#f5f3ef; }
 .white { background:white; }
 
-#about {
-padding-bottom:60px;
-border-bottom:1px solid rgba(0,0,0,0.06);
+.section {
+padding:140px 20px 120px;
+text-align:center;
+position:relative;
 }
 
-#strategy {
-padding-top:60px;
+  .section::before {
+content:"";
+display:block;
+height:90px;   /* same as nav height */
+margin-top:-90px;
+visibility:hidden;
 }
-
-.text {
-max-width:800px;
-margin:auto;
-line-height:1.8;
-}
-
+  
 /* CARDS */
 .card-grid {
 display:flex;
