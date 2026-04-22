@@ -6,23 +6,23 @@
 
 <title>Olive Partners Ltd</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+<meta name="description" content="Olive Partners Ltd is a UK property company focused on high-quality residential assets, supported housing, and long-term value creation.">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 
-/* 🔑 CRITICAL FIX */
+/* GLOBAL */
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 100px;
 }
-.form-actions {
-  display: flex;
-  justify-content: flex-end;
-}
+
 body {
   margin:0;
   font-family:'Inter', sans-serif;
   color:#1f2e23;
+  line-height:1.6;
 }
 
 /* NAV */
@@ -61,6 +61,7 @@ body {
   margin-left:25px;
   text-decoration:none;
   font-size:12px;
+  letter-spacing:1px;
 }
 
 /* HERO */
@@ -71,6 +72,7 @@ body {
   linear-gradient(rgba(31,58,44,0.7), rgba(31,58,44,0.7)),
   url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1600');
   background-size:cover;
+  background-position:center;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -80,22 +82,29 @@ body {
 
 .hero h1 {
   font-family:'Playfair Display';
-  font-size:48px;
+  font-size:52px;
+  line-height:1.3;
 }
 
 /* SECTIONS */
 .section {
-  padding:120px 20px;
+  padding:90px 20px;
   text-align:center;
 }
 
 .light { background:#f5f3ef; }
 .white { background:white; }
 
+h2 {
+  font-family:'Playfair Display';
+  font-size:32px;
+  margin-bottom:15px;
+}
+
 .text {
-  max-width:800px;
+  max-width:780px;
   margin:auto;
-  line-height:1.8;
+  font-size:16px;
 }
 
 /* CARDS */
@@ -115,12 +124,18 @@ body {
   text-align:left;
 }
 
-/* ASSISTED (better image) */
+.card h3 {
+  font-family:'Playfair Display';
+  margin-bottom:10px;
+}
+
+/* ASSISTED */
 .assisted {
   background:
   linear-gradient(rgba(31,58,44,0.88), rgba(31,58,44,0.88)),
   url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=1600');
   background-size:cover;
+  background-position:center;
   color:white;
 }
 
@@ -128,7 +143,7 @@ body {
 .contact {
   background:#1f3a2c;
   color:white;
-  padding:120px 20px;
+  padding:90px 20px;
 }
 
 .contact-grid {
@@ -145,6 +160,7 @@ body {
   color:#C2A85A;
   font-size:12px;
   margin-top:20px;
+  letter-spacing:1px;
 }
 
 .value {
@@ -163,15 +179,19 @@ input, textarea {
 button {
   background:#C2A85A;
   border:none;
-  padding:12px 26px;
+  padding:12px 28px;
   cursor:pointer;
   display:block;
   margin-left:auto;
 }
 
+button:hover {
+  background:#d4b96a;
+}
+
 /* MOBILE */
 @media(max-width:768px){
-  .hero h1 { font-size:32px; }
+  .hero h1 { font-size:34px; }
   .contact-grid { flex-direction:column; }
   .contact-left, .contact-right { width:100%; }
   button { width:100%; margin-left:0; }
@@ -203,7 +223,7 @@ button {
 
 <!-- ABOUT -->
 <div class="section light" id="about">
-<h2 style="font-family:Playfair Display;">About</h2>
+<h2>About</h2>
 <p class="text">
 Olive Partners Ltd is a UK property company focused on the creation and stewardship of high-quality residential assets in markets with enduring demand. We adopt a disciplined, selective approach to acquisition and refurbishment, underpinned by strong fundamentals and long-term thinking, to deliver resilient homes characterised by quality, longevity, and consistency.
 </p>
@@ -211,7 +231,7 @@ Olive Partners Ltd is a UK property company focused on the creation and stewards
 
 <!-- STRATEGY -->
 <div class="section white" id="strategy">
-<h2 style="font-family:Playfair Display;">Our Investment Philosophy</h2>
+<h2>Our Investment Philosophy</h2>
 <p class="text">
 We apply a rigorous, research-driven framework to every acquisition and management decision.
 </p>
@@ -220,17 +240,23 @@ We apply a rigorous, research-driven framework to every acquisition and manageme
 
 <div class="card">
 <h3>Quality Asset Acquisition</h3>
-<p>We target well-located residential properties with strong fundamentals, sustainable demand, and long-term capital preservation characteristics.</p>
+<p>
+We target well-located residential properties with strong fundamentals, sustainable demand, and long-term capital preservation characteristics.
+</p>
 </div>
 
 <div class="card">
 <h3>Professional Asset Management</h3>
-<p>Every property in our portfolio is managed to the highest professional standards, ensuring compliance, tenant welfare, and asset integrity.</p>
+<p>
+Every property in our portfolio is managed to the highest professional standards, ensuring compliance, tenant welfare, and asset integrity.
+</p>
 </div>
 
 <div class="card">
 <h3>Structured Partnerships</h3>
-<p>We work with trusted agents, advisers, and operating partners through clear, transparent structures that align incentives and deliver results.</p>
+<p>
+We work with trusted agents, advisers, and operating partners through clear, transparent structures that align incentives and deliver results.
+</p>
 </div>
 
 </div>
@@ -238,7 +264,7 @@ We apply a rigorous, research-driven framework to every acquisition and manageme
 
 <!-- ASSISTED -->
 <div class="section assisted" id="assisted">
-<h2 style="font-family:Playfair Display;">Assisted Living</h2>
+<h2>Assisted Living</h2>
 <p class="text">
 Olive Partners Ltd develops high-quality residential properties purpose-designed for supported and assisted living. We work closely with care providers to deliver safe, compliant, and adaptable homes that meet real local needs—supporting long-term tenancy, operational stability, and sustainable outcomes for residents and operators.
 </p>
@@ -249,7 +275,11 @@ Olive Partners Ltd develops high-quality residential properties purpose-designed
 <div class="contact-grid">
 
 <div class="contact-left">
-<h2 style="font-family:Playfair Display;">Contact Olive Partners</h2>
+<h2>Contact Olive Partners</h2>
+
+<p style="margin-top:20px; max-width:400px; opacity:0.85;">
+We welcome enquiries from investors, operators, and partners. We respond to all enquiries within 24 hours.
+</p>
 
 <div class="label">ADDRESS</div>
 <div class="value">
@@ -277,9 +307,7 @@ info@olivepartners.co.uk
 <input name="email" placeholder="Email Address" required>
 <input name="phone" placeholder="Phone Number">
 <textarea name="message" placeholder="Message" required></textarea>
-<div class="form-actions">
-  <button type="submit">SEND ENQUIRY</button>
-</div>
+<button type="submit">SEND ENQUIRY</button>
 </form>
 </div>
 
